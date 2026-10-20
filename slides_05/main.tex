@@ -61,7 +61,7 @@
 
 \title{SST1 Übungsstunde 5}
 \author{Matteo Dietz}
-\date{October 2025}
+\date{October 2026}
 
 \begin{document}
 
@@ -78,7 +78,7 @@
 \begin{frame}{Themenüberblick}
     \begin{itemize}
     \item \textbf{Graphische Faltung und Systemeigenschaften}
-    \item[] Repetition und alte Prüfungsaufgabe
+    \item[] Repetition
     \item[] 
     \item \textbf{Verallgemeinerte Funktionen:}
     \item[] Funktionale
@@ -87,18 +87,18 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Themenüberblick}
-    \begin{itemize}
-        \item \textbf{Analoge Lineare Systeme im Frequenzbereich:}
-    \item[] Fouriertransformation: Definition, Eigenschaften und Beispiele
-    \item[] Dualität der Fouriertransformation
-    \item[] Plancherelsche Identität und Parsevalsche Beziehung
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Themenüberblick}
+%     \begin{itemize}
+%         \item \textbf{Analoge Lineare Systeme im Frequenzbereich:}
+%     \item[] Fouriertransformation: Definition, Eigenschaften und Beispiele
+%     \item[] Dualität der Fouriertransformation
+%     \item[] Plancherelsche Identität und Parsevalsche Beziehung
+%     \end{itemize}
+% \end{frame}
 
 \begin{frame}{Aufgaben für diese und nächste Woche}
     \begin{itemize}
-        \item[] \underline{\textbf{46}}, 47, \underline{\textbf{48}}, \underline{\textbf{49}}, \underline{\textbf{50}}, \underline{\textbf{51}}, 52, 53, \underline{\textbf{54}}, \underline{\textbf{55}}, \underline{\textbf{56}}, \underline{\textbf{57}}, 58, \underline{\textbf{59}}, \underline{\textbf{60}}, 61, \underline{\textbf{62}}, 63, \underline{\textbf{64}}, 65, \underline{\textbf{66}}
+        \item[] \underline{\textbf{48}}, \underline{\textbf{49}}, \underline{\textbf{50}}, \underline{\textbf{51}}, 52, 53, \underline{\textbf{54}}, \underline{\textbf{55}}
         \item[] 
         \item[] Die \underline{\textbf{fettgedruckten}} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
     \end{itemize}
@@ -149,12 +149,7 @@
 }}%
 \end{frame}
 
-\begin{frame}{Aufgaben}
-    \begin{itemize}
-        \item \textbf{Aufgabe 45}
-        \item[]
-        \item \textbf{Prüfungsaufgabe: Frühjahr 2024, Aufgabe 1}
-    \end{itemize}
+\begin{frame}{Aufgabe 45}
 \end{frame}
 
 \begin{frame}{Verallgemeinerte Funktionen: Funktionale}
@@ -324,106 +319,106 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Analoge Lineare Systeme im Frequenzbereich}
-\begin{itemize}
-    \item \textbf{Motivation}
-\end{itemize}
-\begin{center}
-     \includegraphics[width=0.65\linewidth]{figures/Zeit_und_Frequenzbereich.png}
-\end{center} 
-\end{frame}
+% \begin{frame}{Analoge Lineare Systeme im Frequenzbereich}
+% \begin{itemize}
+%     \item \textbf{Motivation}
+% \end{itemize}
+% \begin{center}
+%      \includegraphics[width=0.65\linewidth]{figures/Zeit_und_Frequenzbereich.png}
+% \end{center} 
+% \end{frame}
 
-\begin{frame}{Fouriertransformation}
-    \begin{itemize}
-    \item \textbf{Fouriertransformation (FT)}:
-    \item[] \fcolorbox{darkblue}{lightblue}{%
-\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    $$\hat{x}(f) = (\mathcal{F}x)(f) = \int_{-\infty}^{\infty}x(t)e^{-2\pi i f t}\text{d}t$$
-}}%
-    \item[] 
-    \item[] 
-    \item \textbf{Inverse Fouriertransformation (IFT)}:
-    \item[] \fcolorbox{darkblue}{lightblue}{%
-\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    $$x(t) = (\mathcal{F}^{-1}\hat{x})(t) = \int_{-\infty}^{\infty}\hat{x}(f)e^{2\pi i f t}\text{d}f$$
-}}%
-\end{itemize}
-\end{frame}
+% \begin{frame}{Fouriertransformation}
+%     \begin{itemize}
+%     \item \textbf{Fouriertransformation (FT)}:
+%     \item[] \fcolorbox{darkblue}{lightblue}{%
+% \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%     $$\hat{x}(f) = (\mathcal{F}x)(f) = \int_{-\infty}^{\infty}x(t)e^{-2\pi i f t}\text{d}t$$
+% }}%
+%     \item[] 
+%     \item[] 
+%     \item \textbf{Inverse Fouriertransformation (IFT)}:
+%     \item[] \fcolorbox{darkblue}{lightblue}{%
+% \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%     $$x(t) = (\mathcal{F}^{-1}\hat{x})(t) = \int_{-\infty}^{\infty}\hat{x}(f)e^{2\pi i f t}\text{d}f$$
+% }}%
+% \end{itemize}
+% \end{frame}
 
-\begin{frame}{Fouriertransformation: Hinweise}
-    \begin{itemize}
-        \item KomA/NuS 2: FT und IFT waren definiert als:
-$$\hat{x}(\omega) = \int_{-\infty}^{\infty} x(t) e^{-i\omega t}\text{d}t, \hspace{20pt} x(t)=\frac{1}{2\pi} \int_{-\infty}^{\infty} \hat{x}(\omega)e^{i\omega t} \text{d}\omega$$
-    \item In SST1 haben wir $t$ und $f$ als Parameter  anstatt $t$ und $\omega$
-    \item[] 
-    \item $\omega = 2\pi f \implies \text{d}\omega = 2\pi \text{d}f \implies$ kein Vorfaktor $1/(2\pi)$ in IFT
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Fouriertransformation: Hinweise}
+%     \begin{itemize}
+%         \item KomA/NuS 2: FT und IFT waren definiert als:
+% $$\hat{x}(\omega) = \int_{-\infty}^{\infty} x(t) e^{-i\omega t}\text{d}t, \hspace{20pt} x(t)=\frac{1}{2\pi} \int_{-\infty}^{\infty} \hat{x}(\omega)e^{i\omega t} \text{d}\omega$$
+%     \item In SST1 haben wir $t$ und $f$ als Parameter  anstatt $t$ und $\omega$
+%     \item[] 
+%     \item $\omega = 2\pi f \implies \text{d}\omega = 2\pi \text{d}f \implies$ kein Vorfaktor $1/(2\pi)$ in IFT
+%     \end{itemize}
+% \end{frame}
 
-\begin{frame}{Fouriertransformation: Hinweise}
-    \begin{itemize}
-        \item Die Fouriertransformation ist eine \textbf{lineare Abbildung}. (\textbf{Additivität} \& \textbf{Homogenität})
-        \item[] 
-        \item \alert{Berechnet die FT und IFT mithilfe der Transformationstabellen.}
-        \item[] 
-        \item An der Prüfung muss man eigentlich nie die Integrale der FT berechnen. Es gibt immer einen Kunstgriff, nachdem man die FT von der Tabelle ablesen kann.
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Fouriertransformation: Hinweise}
+%     \begin{itemize}
+%         \item Die Fouriertransformation ist eine \textbf{lineare Abbildung}. (\textbf{Additivität} \& \textbf{Homogenität})
+%         \item[] 
+%         \item \alert{Berechnet die FT und IFT mithilfe der Transformationstabellen.}
+%         \item[] 
+%         \item An der Prüfung muss man eigentlich nie die Integrale der FT berechnen. Es gibt immer einen Kunstgriff, nachdem man die FT von der Tabelle ablesen kann.
+%     \end{itemize}
+% \end{frame}
 
-\begin{frame}{Aufgaben}
-    \begin{itemize}
-        \item \textbf{Aufgabe 58.b)}
-        \item[] 
-        \item \textbf{Aufgabe 60.b)}
-        \item[] 
-        \item \textbf{Aufgabe 64.b)}
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Aufgaben}
+%     \begin{itemize}
+%         \item \textbf{Aufgabe 58.b)}
+%         \item[] 
+%         \item \textbf{Aufgabe 60.b)}
+%         \item[] 
+%         \item \textbf{Aufgabe 64.b)}
+%     \end{itemize}
+% \end{frame}
 
-\begin{frame}{Dualität der Fouriertransformation}
-    \includegraphics[width=0.45\linewidth]{figures/dualität_1.png}
-    \includegraphics[width=0.45\linewidth]{figures/dualität_2.png}
-\end{frame}
+% \begin{frame}{Dualität der Fouriertransformation}
+%     \includegraphics[width=0.45\linewidth]{figures/dualität_1.png}
+%     \includegraphics[width=0.45\linewidth]{figures/dualität_2.png}
+% \end{frame}
 
-\begin{frame}{Beispiel}
+% \begin{frame}{Beispiel}
     
-\end{frame}
+% \end{frame}
 
-\begin{frame}{Parseval und Plancherel}
-    \fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    \begin{center}
-        \textbf{Plancherelsche Identität:}
-    \end{center}
-    $$\langle x, y \rangle = \int_{-\infty}^{\infty} x(t)y^\ast (t)\text{d}t = \int_{-\infty}^{\infty}\hat{x}(f)\hat{y}(f)\text{d}f = \langle \hat{x}, \hat{y} \rangle$$
-    \begin{center}
-        \textbf{Parsevalsche Beziehung:}
-    \end{center}
-    $$||x||^2 = \langle x, x \rangle = \int_{-\infty}^{\infty} |x(t)|^2\text{d}t = \int_{-\infty}^{\infty}|\hat{x}(f)|^2\text{d}f = \langle \hat{x}, \hat{x} \rangle = ||\hat{x}||^2$$
-    }}
-\end{frame}
+% \begin{frame}{Parseval und Plancherel}
+%     \fcolorbox{darkblue}{lightblue}{%
+%     \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%     \begin{center}
+%         \textbf{Plancherelsche Identität:}
+%     \end{center}
+%     $$\langle x, y \rangle = \int_{-\infty}^{\infty} x(t)y^\ast (t)\text{d}t = \int_{-\infty}^{\infty}\hat{x}(f)\hat{y}(f)\text{d}f = \langle \hat{x}, \hat{y} \rangle$$
+%     \begin{center}
+%         \textbf{Parsevalsche Beziehung:}
+%     \end{center}
+%     $$||x||^2 = \langle x, x \rangle = \int_{-\infty}^{\infty} |x(t)|^2\text{d}t = \int_{-\infty}^{\infty}|\hat{x}(f)|^2\text{d}f = \langle \hat{x}, \hat{x} \rangle = ||\hat{x}||^2$$
+%     }}
+% \end{frame}
 
-\begin{frame}{Plancherelsche Identität}
-    \begin{itemize}
-    \item \textbf{Theorem}: Wenn $f,g \in L^2(\mathbb{R})$, dann gilt $\langle x, y\rangle = \langle \hat{x}, \hat{y}\rangle$
-    \item[] $\implies \mathcal{F}$ ist längenerhaltend und winkelerhaltend
-    \item \textbf{Beweis}:
-    \item[]
-    \item[]
-    \item[]
-    \item[]
-    \item[]
-    \item[]
-    \item[]
-\end{itemize}
-\end{frame}
+% \begin{frame}{Plancherelsche Identität}
+%     \begin{itemize}
+%     \item \textbf{Theorem}: Wenn $f,g \in L^2(\mathbb{R})$, dann gilt $\langle x, y\rangle = \langle \hat{x}, \hat{y}\rangle$
+%     \item[] $\implies \mathcal{F}$ ist längenerhaltend und winkelerhaltend
+%     \item \textbf{Beweis}:
+%     \item[]
+%     \item[]
+%     \item[]
+%     \item[]
+%     \item[]
+%     \item[]
+%     \item[]
+% \end{itemize}
+% \end{frame}
 
-\begin{frame}{Aufgaben}
-    \begin{itemize}
-        \item \textbf{Aufgabe 66}
-        \item[]
-        \item \textbf{Prüfungsaufgabe: Sommer 2020, Aufgabe 4.a)}
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Aufgaben}
+%     \begin{itemize}
+%         \item \textbf{Aufgabe 66}
+%         \item[]
+%         \item \textbf{Prüfungsaufgabe: Sommer 2020, Aufgabe 4.a)}
+%     \end{itemize}
+% \end{frame}
 
 \end{document}
