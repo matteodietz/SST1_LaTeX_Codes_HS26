@@ -333,14 +333,20 @@ Somit erhält die Fouriertransformationstabelle viel mehr Informationen als nur 
     \item[] Wenden wir uns nun der \textbf{Plancherelschen Identität} für Fouriertransformationen zu:
     \item[] \textbf{Theorem}: Wenn $x,y \in L^2(\mathbb{R})$, dann gilt $\langle x, y\rangle = \langle \hat{x}, \hat{y}\rangle$
     \item[] Somit ist die Fouriertransformation nicht nur längenerhaltend, sondern auch winkelerhaltend.
-    \item[] \textbf{Beweis}:
+    \item[] \textbf{Beweis} (nicht Teil der Vorlesung, aber sehr schön):
 \end{itemize}
 \vspace*{-0.5cm}
-\begin{tikzpicture}
-    % Define the box size and grid spacing
-    \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,4
-    ); % (0,0) is bottom-left corner, (10,10) is top-right corner
-\end{tikzpicture}
+% \begin{tikzpicture}
+%     % Define the box size and grid spacing
+%     \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,4
+%     ); % (0,0) is bottom-left corner, (10,10) is top-right corner
+% \end{tikzpicture}
+Sei $z(t) := x(t)y^\ast(t) \implies \hat{z}(f) = \displaystyle\int_{-\infty}^{\infty} x(t)y^\ast(t) e^{-2\pi ift} \text{d}t \implies \hat{z}(0) = \displaystyle\int_{-\infty}^{\infty} x(t)y^\ast(t) \text{d}t = \langle x, y\rangle$
+
+Zusätzlich: $\hat{z}(0) \overset{8.}{=} (\hat{x} \ast \widehat{y^\ast})(0) = \displaystyle\int_{-\infty}^{\infty} \hat{x}(\tau)\widehat{y^\ast}(0-\tau) \text{d}\tau \overset{4.}{=} \displaystyle\int_{-\infty}^{\infty} \hat{x}(\tau)\hat{y}^\ast(\tau) \text{d}\tau = \langle \hat{x}, \hat{y} \rangle$
+
+$$\implies \langle x, y\rangle = \langle \hat{x}, \hat{y}\rangle$$
+
 \vspace*{-0.5cm}
 \begin{itemize}[leftmargin=0pt]
     \item[] Wenn wir nun in der Plancherelschen Identität $y = x$ wählen, so folgt daraus direkt die Parsevalsche Beziehung.
