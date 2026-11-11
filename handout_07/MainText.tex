@@ -205,7 +205,8 @@ Die \textbf{fettgedruckten} Übungen empfehle ich, weil sie wesentlich zu eurem 
     \begin{itemize}[leftmargin=0pt]
         \item[] \textbf{Bemerkungen}: In diesem Bereich betrachten wir den Fall $T=1$. Die folgenden Aussagen gelten jedoch allgemein auch für $T\neq 1$ unter minimal grösserem Rechenaufwand, den wir uns hier sparen.
         \item[] Die Parsevalsche Beziehung sagt zum einen aus, dass die $L^2$-Norm der Funktion (“Energie”) statt aus einem Integral aus einer Summe (der Fourier-Koeffizienten im Betragsquadrat) berechnet werden kann. In Analysis wird dies verwendet um gewisse Reihen zu summieren.
-        \item[] Zum anderen sagt die Parsevalsche Beziehung aus, dass die Fourierkoeffizenten für $L^2([0,1])$ schneller als $\frac{1}{n}$ abklingen, da die linke Seite einen definierten Wert und die rechte Reihe damit konvergieren muss.
+        \item[] Zum anderen müssen die Betragsquadrate $|c_k|^2$ eine Nullfolge bilden, da $\sum_{k=-\infty}^\infty |c_k|^2$ konvergiert (für $x \in L^2([0,T])$). Es gilt also $\lim_{|k|\to \infty} c_k = 0$.
+        \item[] Wenn die Folge $|c_k|^2$ zusätzlich monoton mit zunehmendem $|k|$ fällt, dann müssen die Betragsquadrate schneller als $1/|k|$ abfallen.
         \item[] Wenn wir nun $x(t) = \sum_{k = -\infty}^\infty c_k e^{2 \pi i k t}$ nach $t$ ableiten, erhalten wir:
         $$\frac{\text{d}x(t)}{\text{d}t} = \sum_{k=-\infty}^{\infty} 2 \pi i k \underbrace{\cdot c_k \cdot}_{\hat{x}(k)} e^{2 \pi i k t}$$
         Das heisst, für den $k-$ten Fourier-Koeffizienten der Ableitung von $x(t)$ gilt: $\hat{x'}(k) = 2 \pi i k \hat{x}(k)$ 
