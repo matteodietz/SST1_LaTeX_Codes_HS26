@@ -258,7 +258,7 @@ Dieses Signal ist $\frac{1}{T}-$periodisch und besitzt somit eine Fourierreihend
     \includegraphics[width=0.6\textwidth]{docimgs/dualität_1.png}
 \end{minipage}
 
-$$\implies \frac{1}{T}\sum_{k=-\infty}^{\infty}\hat{x}\left( f- \frac{k}{T} \right) = \frac{1}{T}\cdot T \sum_{k=-\infty}^{\infty} \underbrace{\hat{\hat{x}}(kT)}_{x(-kt)}e^{2 \pi i k f T} = \sum_{k=-\infty}^\infty x(-kT)e^{2 \pi i k f T} = \sum_{k=-\infty}^\infty \underbrace{x(kT)}_{c_k}e^{-2 \pi i k f T}$$
+$$\implies \frac{1}{T}\sum_{k=-\infty}^{\infty}\hat{x}\left( f- \frac{k}{T} \right) = \frac{1}{T}\cdot T \sum_{k=-\infty}^{\infty} \underbrace{\hat{\hat{x}}(kT)}_{x(-kT)}e^{2 \pi i k f T} = \sum_{k=-\infty}^\infty x(-kT)e^{2 \pi i k f T} = \sum_{k=-\infty}^\infty \underbrace{x(kT)}_{c_k}e^{-2 \pi i k f T}$$
 Indem wir im letzen Schritt die Summationsreihenfolge gewechselt haben $(k \to -k)$, haben wir das abgetastete Signal im Frequenzbereich $\hat{x}_{\text{abg}}(f)$ als komplexe Fourierreihe dargestellt. Die \textbf{Abtastwerte} $x(kT)$ sind die Koeffizienten der Fourierreihe des Spektrums $\hat{x}_{\text{abg}}(f)$.
 
 \subsection*{Notation für Zeitdiskrete Signale}
