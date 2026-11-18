@@ -129,7 +129,7 @@
 
 \section*{Themenüberblick}
 \begin{itemize}
-    \item \textbf{Repetition: Abtasttheorem}
+    % \item \textbf{Repetition: Abtasttheorem}
     \item \textbf{Zeitdiskrete Signale und Systeme}
     \item[] Zeitdiskrete Fouriertransformation (DTFT)
     \item[] Zeitdiskrete LTI-Systeme und Systemeigenschaften
@@ -147,94 +147,94 @@ Die \underline{\textbf{fettgedruckten}} Übungen empfehle ich, weil sie wesentli
 \vfill \null
 \pagebreak
 
-\section*{Repetition: Abtasttheorem}
-\vspace*{-0.5cm}
-\subsection*{Abgetastete Signale im Frequenzbereich}
-\vspace*{-0.5cm}
-$$x_{abg.}(t) = x(t)\delta_T(t) = \sum_{k=-\infty}^{\infty} x(kT)\delta(t-kT) \hspace{10pt} \transform{20.}{2} \hspace{10pt} \hat{x}_{abg.}(f) = \frac{1}{T} \sum_{k = -\infty}^\infty \hat{x}\left( f- \frac{k}{T} \right)$$
-\vspace*{-0.5cm}
-\begin{center}
-    \includegraphics[width=0.8\linewidth]{docimgs/abtastung2.jpg}
-\end{center}
-\vspace*{-0.75cm}
-\begin{itemize}[leftmargin=0pt]
-    \item[] \fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-        Die Abtastung im Zeitbereich entspricht einer Periodisierung im Frequenzbereich.
-    }}%
-    \item[]  Die Abtastung von $x(t)$ erzeugt im Frequenzbereich um Skalierungsfaktor $\frac{1}{T}$ skalierte Kopien von $\hat{x}(f)$, die um $f_s = \frac{1}{T}$ verschoben sind, wobei $T$ die Abtastperiode ist.
-\end{itemize}
+% \section*{Repetition: Abtasttheorem}
+% \vspace*{-0.5cm}
+% \subsection*{Abgetastete Signale im Frequenzbereich}
+% \vspace*{-0.5cm}
+% $$x_{abg.}(t) = x(t)\delta_T(t) = \sum_{k=-\infty}^{\infty} x(kT)\delta(t-kT) \hspace{10pt} \transform{20.}{2} \hspace{10pt} \hat{x}_{abg.}(f) = \frac{1}{T} \sum_{k = -\infty}^\infty \hat{x}\left( f- \frac{k}{T} \right)$$
+% \vspace*{-0.5cm}
+% \begin{center}
+%     \includegraphics[width=0.8\linewidth]{docimgs/abtastung2.jpg}
+% \end{center}
+% \vspace*{-0.75cm}
+% \begin{itemize}[leftmargin=0pt]
+%     \item[] \fcolorbox{darkblue}{lightblue}{%
+%     \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%         Die Abtastung im Zeitbereich entspricht einer Periodisierung im Frequenzbereich.
+%     }}%
+%     \item[]  Die Abtastung von $x(t)$ erzeugt im Frequenzbereich um Skalierungsfaktor $\frac{1}{T}$ skalierte Kopien von $\hat{x}(f)$, die um $f_s = \frac{1}{T}$ verschoben sind, wobei $T$ die Abtastperiode ist.
+% \end{itemize}
 
-\noindent
-\begin{minipage}[t]{0.32\textwidth}
-    \begin{center}
-        \textbf{Kritische Abtastung}
-    \end{center}
-    \vspace*{-0.5cm}
-    \begin{center}
-        \includegraphics[width=0.77\linewidth]{docimgs/krit_abtast.png}
-    \end{center}
-    $$f_s = 2f_g$$
-    Wir können das Signal mit einem idealen Tiefpassfilter der Breite $W = f_g$ rekonstruieren.
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.32\textwidth}
-    \begin{center}
-        \textbf{Überabtastung}
-    \end{center}
-    \vspace*{-0.5cm}
-    \begin{center}
-        \includegraphics[width=\linewidth]{docimgs/ueberabtast.png}
-    \end{center}
-    $$f_s > 2f_g$$
-    In diesem Fall können wir sogar einen stabilen Tiefpassfilter verwenden. Überabtastung mit $f_s > 2f_g$ garantiert nicht nur, dass perfekte Rekonstruktion möglich ist, sondern hilft im Allgemeinen auch, die Empfindlichkeit auf Rauschen im Abtastprozess zu verringern.
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.32\textwidth}
-    \begin{center}
-        \textbf{Unterabtastung}
-    \end{center}
-    \vspace*{-0.5cm}
-    \begin{center}
-        \includegraphics[width=0.75\linewidth]{docimgs/aliasing1.png}
-    \end{center}
-    $$f_s < 2f_g$$
-    Es gibt \textbf{Aliasing}. Mit Hilfe eines Tiefpassfilters erhalten wir keine perfekte Version von $\hat{x}(f)$, eine Rekonstruktion des ursprünglichen Signals ohne Informationsverluste ist somit nicht möglich.
-\end{minipage}
+% \noindent
+% \begin{minipage}[t]{0.32\textwidth}
+%     \begin{center}
+%         \textbf{Kritische Abtastung}
+%     \end{center}
+%     \vspace*{-0.5cm}
+%     \begin{center}
+%         \includegraphics[width=0.77\linewidth]{docimgs/krit_abtast.png}
+%     \end{center}
+%     $$f_s = 2f_g$$
+%     Wir können das Signal mit einem idealen Tiefpassfilter der Breite $W = f_g$ rekonstruieren.
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.32\textwidth}
+%     \begin{center}
+%         \textbf{Überabtastung}
+%     \end{center}
+%     \vspace*{-0.5cm}
+%     \begin{center}
+%         \includegraphics[width=\linewidth]{docimgs/ueberabtast.png}
+%     \end{center}
+%     $$f_s > 2f_g$$
+%     In diesem Fall können wir sogar einen stabilen Tiefpassfilter verwenden. Überabtastung mit $f_s > 2f_g$ garantiert nicht nur, dass perfekte Rekonstruktion möglich ist, sondern hilft im Allgemeinen auch, die Empfindlichkeit auf Rauschen im Abtastprozess zu verringern.
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.32\textwidth}
+%     \begin{center}
+%         \textbf{Unterabtastung}
+%     \end{center}
+%     \vspace*{-0.5cm}
+%     \begin{center}
+%         \includegraphics[width=0.75\linewidth]{docimgs/aliasing1.png}
+%     \end{center}
+%     $$f_s < 2f_g$$
+%     Es gibt \textbf{Aliasing}. Mit Hilfe eines Tiefpassfilters erhalten wir keine perfekte Version von $\hat{x}(f)$, eine Rekonstruktion des ursprünglichen Signals ohne Informationsverluste ist somit nicht möglich.
+% \end{minipage}
 
-\pagebreak
+% \pagebreak
 
-\subsection*{Abtasttheorem}
-\vspace*{-0.5cm}
-\fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-        \vspace*{0.25cm}
-        Ein Signal mit der Bandbreite $f_g$ kann aus seinen Abtastwerten, genommen mit einer Rate von $f_s \geq 2f_g$, eindeutig rekonstruiert werden. Die kritische Rate $f_s = 2 f_g$ wird als \textbf{Nyquistrate} bezeichnet.
-        \vspace*{0.25cm}
-    }}%
+% \subsection*{Abtasttheorem}
+% \vspace*{-0.5cm}
+% \fcolorbox{darkblue}{lightblue}{%
+%     \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%         \vspace*{0.25cm}
+%         Ein Signal mit der Bandbreite $f_g$ kann aus seinen Abtastwerten, genommen mit einer Rate von $f_s \geq 2f_g$, eindeutig rekonstruiert werden. Die kritische Rate $f_s = 2 f_g$ wird als \textbf{Nyquistrate} bezeichnet.
+%         \vspace*{0.25cm}
+%     }}%
 
-\subsection*{Rekonstruktion}
-\begin{itemize}[leftmargin=0pt]
-    \item[] Im Allgemeinen ist die Rekonstruktion eines Signals aus seinen Abtastwerten gegeben durch:
-    \item[] 
-    \fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-       $$y(t) = T \displaystyle\sum_{k = -\infty}^\infty x(kT)h(t-kT)$$
-    }}%
-    \item[] wobei $h(t)$ die Impulsantwort eines Filters ist. Im Falle der kritischen Abtastung brauchen wir für die Rekonstruktion einen idealen Tiefpassfilter $h(t) = h_{id}(t)$ mit Breite $W = f_g = \frac{f_s}{2} = \frac{1}{2T}$.
-    $$\hat{h}_{id}(f) = \displaystyle\begin{cases}
-        1, \; |f| \leq W \\
-        0, \; |f| > W
-    \end{cases} \invtransform{}{1} \; h_{id}(t)=\displaystyle\frac{\sin(2 \pi W t)}{\pi t}$$
-    \item[] Deswegen gilt bei der kritischen Abtastung: $y(t) = x(t) = \displaystyle\sum_{k=-\infty}^\infty x(kT)\displaystyle\frac{\sin\left(\frac{\pi}{T}(t-kT)\right)}{\frac{\pi}{T}(t-kT)}$
-\end{itemize}
-\vspace*{-0.75cm}
-\begin{center}
-    \includegraphics[width=\linewidth]{docimgs/filtering1.jpg}
-\end{center}
+% \subsection*{Rekonstruktion}
+% \begin{itemize}[leftmargin=0pt]
+%     \item[] Im Allgemeinen ist die Rekonstruktion eines Signals aus seinen Abtastwerten gegeben durch:
+%     \item[] 
+%     \fcolorbox{darkblue}{lightblue}{%
+%     \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%        $$y(t) = T \displaystyle\sum_{k = -\infty}^\infty x(kT)h(t-kT)$$
+%     }}%
+%     \item[] wobei $h(t)$ die Impulsantwort eines Filters ist. Im Falle der kritischen Abtastung brauchen wir für die Rekonstruktion einen idealen Tiefpassfilter $h(t) = h_{id}(t)$ mit Breite $W = f_g = \frac{f_s}{2} = \frac{1}{2T}$.
+%     $$\hat{h}_{id}(f) = \displaystyle\begin{cases}
+%         1, \; |f| \leq W \\
+%         0, \; |f| > W
+%     \end{cases} \invtransform{}{1} \; h_{id}(t)=\displaystyle\frac{\sin(2 \pi W t)}{\pi t}$$
+%     \item[] Deswegen gilt bei der kritischen Abtastung: $y(t) = x(t) = \displaystyle\sum_{k=-\infty}^\infty x(kT)\displaystyle\frac{\sin\left(\frac{\pi}{T}(t-kT)\right)}{\frac{\pi}{T}(t-kT)}$
+% \end{itemize}
+% \vspace*{-0.75cm}
+% \begin{center}
+%     \includegraphics[width=\linewidth]{docimgs/filtering1.jpg}
+% \end{center}
 
-\vfill \null
-\pagebreak
+% \vfill \null
+% \pagebreak
 
 \section*{Zeitdiskrete Signale}
 \vspace*{-0.5cm}
